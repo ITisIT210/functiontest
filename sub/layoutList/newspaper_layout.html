@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            line-height: 1.5;
+            font-size: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none;
+            color: #000;
+        }
+
+        .inner {
+            margin: 0px auto;
+            max-width: 1400px;
+        }
+
+        #header {
+            width: 100%;
+            height: 100%;
+        }
+
+        #header .inner>div {
+            padding: 20px 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        #header .inner>div::before {
+            content: "";
+            width: 100%;
+            height: 5px;
+            border-top: 2px solid #999;
+            border-bottom: 2px solid #000;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        #header .inner>div::after {
+            content: "";
+            width: 100%;
+            height: 5px;
+            border-top: 2px solid #000;
+            border-bottom: 2px solid #999;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+        }
+
+        #header .inner>div>.left,
+        #header .inner>div>.right {
+            width: 220px;
+            height: 70px;
+            border: 2px solid #000;
+            font-size: 25px;
+            font-weight: 900;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #header h1 {
+            margin: 0px;
+            padding: 0px;
+            display: block;
+            font-size: 50px;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        #header .gnb {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            position: relative;
+        }
+
+        #header .gnb::after {
+            content: "";
+            width: 100%;
+            height: 5px;
+            border-top: 2px solid #999;
+            border-bottom: 2px solid #000;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+        }
+
+        #header .gnb li {
+            padding: 20px 0px 25px;
+        }
+
+        #header .gnb li a {
+            padding: 0px;
+            margin: 0px;
+            display: inline-block;
+            line-height: 1;
+        }
+
+        #header .gnb li a:hover {
+            border-bottom: 1px solid #000;
+        }
+
+        #container {
+            width: 100%;
+            height: 100%;
+        }
+
+        #container .inner {
+            display: flex;
+            /* position: relative; */
+        }
+
+        #container .linkList {
+            width: 20%;
+        }
+
+        #container .contents {
+            padding: 0px 30px;
+            width: 60%;
+            position: relative;
+        }
+
+        #container .contents::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-left: 2px solid #000;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        #container .contents::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-right: 2px solid #000;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        #container .contents h2 p {
+            font-size: 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        #container .contents h2 span {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        #container .any {
+            width: 20%;
+        }
+
+        #container .any ul {
+            width: 100%;
+            height: 100%;
+        }
+
+        #container .any ul li {
+            padding: 0px 0px 50px;
+        }
+
+        #container .any ul li a {
+            display: block;
+            background: #000;
+            position: relative;
+        }
+
+        #container .any ul li a::before {
+            content: "이미지 링크";
+            color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #container .any img {
+            display: block;
+            width: 100%;
+            opacity: 0.3;
+        }
+
+        #footer {
+            width: 100%;
+            height: 248px;
+            background: #000;
+        }
+
+        #footer .inner {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #footer h1 {
+            font-size: 50px;
+            font-weight: 900;
+            color: #fff;
+        }
+
+        #footer .address {
+            font-style: normal;
+            font-size: 20px;
+            font-weight: 900;
+            color: #fff;
+        }
+
+        #footer .tel {
+            font-size: 20px;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        #footer .sns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #footer .sns li a {
+            margin: 0px 10px;
+            display: block;
+            font-size: 1rem;
+            background: #fff;
+        }
+
+        #footer .sns li:last-child a {
+            margin-right: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="inner">
+                <div>
+                    <div class="left">Left</div>
+                    <h1>Logo</h1>
+                    <div class="right">Right</div>
+                </div>
+
+                <ul class="gnb">
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                    <li><a href="#">메뉴4</a></li>
+                    <li><a href="#">메뉴5</a></li>
+                </ul>
+            </div> <!-- inner end -->
+        </header> <!-- header end -->
+
+        <article id="container">
+            <div class="inner">
+                <div class="linkList">
+                    <ul>
+                        <li><a href="#">링크1</a></li>
+                        <li><a href="#">링크2</a></li>
+                        <li><a href="#">링크3</a></li>
+                        <li><a href="#">링크4</a></li>
+                        <li><a href="#">링크5</a></li>
+                    </ul>
+                </div> <!-- linkList end -->
+
+                <div class="contents">
+                    <h2>
+                        <p>Title</p>
+                        <span>2022.03.24.</span>
+                    </h2>
+
+                    <dl>
+                        <dt>Lorem Ipsum</dt>
+                        <dd>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias illum quo quod dolor
+                            quisquam, sequi necessitatibus veniam quibusdam veritatis a animi beatae fugit vitae
+                            similique nobis excepturi nisi dolore architecto?
+                        </dd>
+                    </dl>
+                </div> <!-- contents end -->
+
+                <div class="any">
+                    <ul>
+                        <li><a href="#"><img src="./images/bg1.jpg" alt="image"></a></li>
+                        <li><a href="#"><img src="./images/bg2.jpg" alt="image"></a></li>
+                        <li><a href="#"><img src="./images/bg3.jpg" alt="image"></a></li>
+                    </ul>
+                </div> <!-- any end -->
+            </div> <!-- inner end -->
+        </article> <!-- container end -->
+
+        <footer id="footer">
+            <div class="inner">
+                <h1>Logo</h1>
+
+                <address class="address">
+                    Lorem Ipsum, NY
+                </address>
+
+                <p class="tel">000-0000-0000</p>
+
+                <ul class="sns">
+                    <li><a href="">SNS링크1</a></li>
+                    <li><a href="">SNS링크2</a></li>
+                    <li><a href="">SNS링크3</a></li>
+                </ul>
+            </div>  <!-- inner end -->
+        </footer>   <!-- footer end -->
+    </div> <!-- wrap end -->
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+@charset "uft-8";
+
+@keyframes rotateInfinite2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#header {
+    padding: 50px 0px;
+    width: 100%;
+    height: 150px;
+    left: 50%;
+    top: 0px;
+    transform: translateX(-50%);
+    position: fixed;
+    z-index: 9;
+    background: transparent;
+}
+
+#header .inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header h1 a {
+    display: inline-block;
+    font-family: 'Baskervville', serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: #fff;
+}
+
+#header .gnb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .gnb li {
+    margin: 0px 40px;
+}
+
+#header .gnb li a {
+    display: inline-block;
+    font-family: 'Baskervville', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+#header .util {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#header .util li {
+    margin: 0px 40px;
+}
+
+#header .util li:nth-child(1) {}
+
+#header .util li a {
+    display: inline-block;
+    font-family: 'Baskervville', serif;
+    font-size: 1rem;
+    font-weight: 100;
+    color: #fff;
+}
+
+/* h2 */
+.contents h2 {
+    margin-top: 180px;
+    display: block;
+    font-family: 'Baskervville', serif;
+    font-size: 100px;
+    font-weight: 500;
+    color: #000;
+}
+
+/* intro */
+.contents .intro {
+    margin: 60px 0px 120px;
+    display: block;
+    font-family: 'Baskervville', serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: #000;
+}
+
+/* arrow */
+.contents .arrow {
+    width: 100px;
+    height: 5px;
+    background: #000;
+    position: relative;
+    transition: width 0.4s;
+    cursor: pointer;
+}
+
+.contents .arrow:hover {
+    width: 150px;
+}
+
+.contents .arrow::before {
+    content: "";
+    width: 33px;
+    height: 5px;
+    background: #000;
+    transform: rotate(135deg);
+    position: absolute;
+    right: -6px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.contents .arrow::after {
+    content: "";
+    width: 33px;
+    height: 5px;
+    background: #000;
+    transform: rotate(-135deg);
+    position: absolute;
+    right: -6px;
+    top: -10px;
+    cursor: pointer;
+}
+
+/* arrow */
+
+#a1 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#a1 .mainVisual {
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+
+#a1 .mainVisual .mb {
+    width: 100%;
+    height: 100%;
+}
+
+/* #a1 .mainVisual .mb li {
+    width: 100%;
+    height: 100vh;
+} */
+
+#a1 .mainVisual .mb li.mb1 {
+    height: 800px;
+    background: url("../images/bg5.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+#a1 .mainVisual .mb li.mb2 {
+    height: 800px;
+    background: url("../images/bg4.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+#a1 .mainVisual .mb li.mb3 {
+    height: 800px;
+    background: url("../images/bg7.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+#a1 .mainVisual .mb li .inner {
+    height: 100%;
+    position: relative;
+}
+
+#a1 .mainVisual .mb li .inner span {
+    display: block;
+    font-family: 'Baskervville', serif;
+    font-size: 120px;
+    font-weight: 300;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#a2 {
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+#a2 .container {
+    width: 1400px;
+    height: 900px;
+    position: relative;
+}
+
+#a2 .contents {
+    /* margin-top: 180px; */
+    position: absolute;
+    left: 0px;
+}
+
+#a2 .container .topImg {
+    width: 1395px;
+    height: 900px;
+    background: url("../images/bg9.jpg") no-repeat center center;
+    background-size: cover;
+    object-fit: cover;
+    position: absolute;
+    right: -100px;
+    z-index: -1;
+}
+
+/* circleTxt */
+#a2 .container .circleTxt {
+    position: absolute;
+    left: 0px;
+    bottom: -80px;
+    width: 170px;
+    height: 170px;
+    background: url("../images/THIS_IS_TEST.png") no-repeat center center / 100%;
+    animation: rotateInfinite2 30s linear infinite both;
+}
+
+#a3 {
+    margin-top: 180px;
+    width: 100%;
+    height: 1100px;
+    /* overflow: hidden; */
+    background: #f8f8f9;
+}
+
+#a3 .midArea {
+    width: 100%;
+    height: 100%;
+}
+
+#a3 .inner {
+    height: 100%;
+    position: relative;
+}
+
+#a3 h2 {
+    width: 100%;
+    display: block;
+    font-family: 'Baskervville', serif;
+    font-size: 100px;
+    font-weight: 500;
+    color: #181d62;
+    font-size: 100px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: -85px;
+    transform: translateX(-50%);
+}
+
+#a3 .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#a3 .contents {
+    width: calc((100% - 100px) / 2);
+}
+
+#a3 .contents h3 {
+    padding-top: 180px;
+    display: inline-block;
+    font-family: 'Baskervville', serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #000;
+}
+
+#a3 .midImg {
+    width: calc((100% - 100px) / 2);
+    height: 780px;
+    background: url("../images/bg12.jpg") no-repeat center center;
+    background-size: cover;
+    object-fit: cover;
+}
+
+#a3 .container .circleTxt {
+    position: absolute;
+    right: -75px;
+    bottom: 75px;
+    width: 170px;
+    height: 170px;
+    background: url("../images/THIS_IS_TEST.png") no-repeat center center / 100%;
+    animation: rotateInfinite2 30s linear infinite both;
+}
