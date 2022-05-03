@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/owl.carousel.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/test16.css">
+    <link rel="stylesheet" href="./css/locomotive-scroll.css">
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/locomotive-scroll.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/owl.carousel.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div data-scroll-container>
+            <header id="header">
+                <nav>
+                    <div class="inner">
+                        <h1><a href="./test16.html">LOGO</a></h1>
+
+                        <ul class="gnb">
+                            <li><a href="#">MENU1</a></li>
+                            <li><a href="#">MENU2</a></li>
+                            <li><a href="#">MENU3</a></li>
+                            <li><a href="#">MENU4</a></li>
+                            <li><a href="#">MENU5</a></li>
+                        </ul> <!-- .gnb ned -->
+
+                        <ul class="util">
+                            <li><a href="#">EN</a></li>
+                            <li><a href="#">CART</a></li>
+                        </ul> <!-- .util end -->
+                    </div> <!-- inner end -->
+                </nav>
+            </header> <!-- #header end -->
+
+            <div data-scroll-section>
+                <article id="a1">
+                    <div class="mainVisual">
+                        <ul class="mb">
+                            <li class="mb1">
+                                <div class="inner">
+                                    <span>Lorem ipsum</span>
+                                </div>  <!-- inner end -->
+                            </li>
+                            <li class="mb2">
+                                <div class="inner">
+                                    <span>Dolor sit amet</span>
+                                </div>  <!-- inner end -->
+                            </li>
+                            <li class="mb3">
+                                <div class="inner">
+                                    <span>Adipisicing elit</span>
+                                </div>  <!-- inner end -->
+                            </li>
+                        </ul> <!-- mb end -->
+                    </div> <!-- mainVisual -->
+                </article> <!-- #a1 end -->
+
+                <article id="a2">
+                    <div class="topArea">
+                        <div class="inner">
+                            <div class="container">
+                                <div class="contents">
+                                    <h2 data-scroll data-scroll-speed="1" data-scroll-position="bottom"
+                                    data-scroll-direction="vertical">Brands</h2>
+
+                                    <p class="intro" data-scroll data-scroll-speed="1" data-scroll-position="bottom"
+                                    data-scroll-direction="vertical">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br>
+                                        Accusamus repellat ipsa cumque tenetur debitis voluptatum<br>
+                                        sint animi quis laboriosam voluptates tempora eum quibusdam<br>
+                                        ipsum neque sed doloremque quisquam, accusantium quasi.
+                                    </p>
+
+                                    <p class="arrow" data-scroll data-scroll-speed="1" data-scroll-position="bottom"
+                                    data-scroll-direction="vertical"></p>
+                                </div> <!-- contents end -->
+
+                                <div class="topImg"></div> <!-- topImg end -->
+
+                                <div class="circleTxt"></div> <!-- circleTxt end -->
+                            </div> <!-- container end -->
+                        </div> <!-- inner end -->
+                    </div> <!-- topArea end -->
+                </article> <!-- #a2 end -->
+
+                <article id="a3">
+                    <div class="midArea">
+                        <div class="inner">
+                            <div class="container">
+                                <h2>Lorem. Ipsum.</h2>
+                                <div class="contents">
+                                    <h3>Lorem / Ipsum / Dolor</h3>
+
+                                    <p class="intro">
+                                        Laudantium corrupti qui,<br>
+                                        voluptatibus libero officia dolorem,<br>
+                                        eaque reprehenderit, omnis sit aperiam<br>
+                                        vitae obcaecati at possimus culpa voluptatem?
+                                    </p>
+
+                                    <p class="arrow"></p>
+                                </div> <!-- contents end -->
+
+                                <div class="midImg" data-scroll data-scroll-speed="1" data-scroll-position="bottom"
+                                data-scroll-direction="vertical"></div> <!-- midImg end -->
+
+                                <div class="circleTxt"></div> <!-- circleTxt end -->
+                            </div> <!-- container end -->
+                        </div> <!-- inner end -->
+                    </div> <!-- midArea end -->
+                </article> <!-- #a3 end -->
+            </div> <!-- data-scroll-section end -->
+        </div> <!-- data-scroll-container end -->
+    </div> <!-- #wrap end -->
+
+
+</body>
+<script>
+    $(document).ready(function () {
+        var scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true
+        });
+
+        $('.mb').slick({
+            dots: false,
+            arrows: true,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            cssEase: 'linear'
+        });
+    });
+</script>
+
+</html>
