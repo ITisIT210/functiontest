@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/test21.css">
+    <link rel="stylesheet" href="./css/locomotive-scroll.css">
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/locomotive-scroll.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="inner">
+                <h1><a href="#">Logo</a></h1>
+
+                <ul class="gnb">
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Menu</a></li>
+                </ul>
+
+                <div class="ham"></div> <!-- ham end -->
+            </div> <!-- inner end -->
+        </header> <!-- #header end -->
+
+        <div data-scroll-container>
+            <div data-scroll-section>
+                    <article id="a1">
+                        <div class="inner" data-scroll-section>
+                            <h2>
+                                Lorem ipsum<br>
+                                dolor sit amet
+                            </h2>
+
+                            <div class="a1_img">
+                                <div class="imgs"></div>
+                            </div> <!-- a1_img end -->
+
+                            <div class="intro">
+                                <p class="p1" data-scroll data-scroll-speed="9" data-scroll-direction="horizontal" data-scroll-position="left">Consectetur</p>
+                                <p class="p2" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">Adipisicing</p>
+                                <p class="p3" data-scroll data-scroll-speed="1" data-scroll-direction="vertical" data-scroll-position="top">Amet iusto & omnis nihil</p>
+                            </div> <!-- intro end -->
+                        </div> <!-- inner end -->
+                    </article> <!-- a1 end -->
+
+                    <article id="a2">
+                        <div class="inner">
+                            <div class="desc" data-scroll-section>
+                                <p class="d1" data-scroll data-scroll-speed="5" data-scroll-direction="vertical" data-scroll-position="left">
+                                    Lorem<br>
+                                    is ipsum of dummy text
+                                </p>
+
+                                <p class="d2" data-scroll data-scroll-speed="3" data-scroll-direction="vertical" data-scroll-position="left">
+                                    Lorem ipsum dolor sit amet consectetur,<br>
+                                    adipisicing elit. Optio, ipsa. Repellat,<br>
+                                    sint! Vero, impedit nostrum?
+                                </p>
+
+                                <p class="d3" data-scroll data-scroll-speed="1" data-scroll-direction="vertical" data-scroll-position="left">
+                                    Velit quam corrupti porro laborum beatae,<br>
+                                    consequuntur eaque.
+                                    <br>Soluta consectetur deleniti ad fugit.
+                                </p>
+                            </div> <!-- desc -->
+                        </div> <!-- inner end -->
+                    </article> <!-- #a2 end -->
+
+                    <article id="a3">
+                        <div class="inner">
+                            <div data-scroll-section>
+                                <p data-scroll data-scroll-speed="9" data-scroll-direction="horizontal" data-scroll-position="top" data-scroll-target="#a1" data-scroll-repeat>Lorem ipsum Project. Lorem ipsum Project. Lorem ipsum Project. Lorem ipsum Project. Lorem ipsum Project.</p>
+                            </div>
+                        </div> <!-- inner end -->
+                    </article> <!-- #a3 end -->
+                </div> <!-- data-scroll-section end -->
+            </div> <!-- data-scroll-container end -->
+        </div> <!-- data-scroll-section end -->
+    </div> <!-- #wrap end -->
+</body>
+<script>
+    var scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true
+    });
+</script>
+
+</html>
