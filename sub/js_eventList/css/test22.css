@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+.blank {
+    margin-top: 500px;
+    height: 1500px;
+    border: 3px dashed #f00;
+}
+
+#img_sq {
+    position: fixed;
+    top: 100px;
+}

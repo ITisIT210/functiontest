@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 시퀀스 예제2</title>
+    <style>
+        #img_sq {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #img_sq > img {
+            width: 100%;
+        }
+
+        .blank {
+            height: 10000px;
+        }
+    </style>
+</head>
+<body>
+    <div id="img_sq">
+        <canvas id="screen" width="1400" height="700" style="display: block; margin: 0 auto;">
+            
+        </canvas>
+    </div>  <!-- #img_sq end -->
+    <div class="blank"></div>
+    <script src="./js/test23_sq.js"></script>
+</body>
+</html>

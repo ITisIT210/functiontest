@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 시퀀스 예제1</title>
+
+    <!-- <link rel="stylesheet" href="./css/common.css"> -->
+    <link rel="stylesheet" href="./css/test22.css">
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+        <!-- 
+            0. 자동으로 이미지 시퀀스가 플레이 된다.(이미지 스퀀스 준비)
+                - 일정한 간격으로 플레이
+            1. 스크롤을 한다.
+            2. 이미지 시퀀스가 플레이된다.
+        -->
+
+        <h1>Image Sequence Play</h1>
+        
+        <div id="img_sq">
+            <canvas width="500" height="500" id="screen">
+                <!-- canvas에는 두 가지 속성이 있음, 인라인css방식으로 하는 것이 효율적임 -->
+            </canvas>
+
+        </div>
+        <div class="blank"></div>
+    <!-- <script src="./js/test22_play.js"></script> -->
+    <script src="./js/test22_sq.js"></script>
+</body>
+
+</html>
