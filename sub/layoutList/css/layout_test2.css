@@ -235,8 +235,10 @@
 
 #a1 .contents .first li {
     width: 100%;
-    background: #fff;
-    border: 1px solid #ddd;
+    background: #1f2a64;
+    /* border: 1px solid #ddd; */
+    box-shadow: 5px 5px 10px #1a2455,
+    -5px -5px 10px #243073;;
     border-radius: 20px;
 }
 
@@ -250,6 +252,7 @@
 
 #a1 .contents .first li a {
     padding: 100px 0px;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -262,13 +265,16 @@
 
 #a1 .contents .second li {
     width: 100%;
-    background: #fff;
-    border: 1px solid #ddd;
+    background: #1f2a64;
+    /* border: 1px solid #ddd; */
+    box-shadow: 5px 5px 10px #1a2455,
+    -5px -5px 10px #243073;;
     border-radius: 20px;
 }
 
 #a1 .contents .second li a {
     padding: 100px 0px;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -293,8 +299,10 @@
 #a2 ul li a {
     width: 230px;
     height: 230px;
-    background: #fff;
+    color: #fff;
+    background: #164927;
     border-radius: 50%;
+    box-shadow: 29px 29px 58px #133e21, -29px -29px 58px #19542d;
     display: flex;
     justify-content: center;
     align-items: center;
